@@ -1,5 +1,6 @@
+// Premenna ktorá má v sebe zoznam Card
 let cardsContainer = document.querySelector('.cards ul');
-
+// Vytvoril som si pole objektov v JS
 let arrayOfObject = [
     {
         title: "Playdate SDK",
@@ -14,7 +15,7 @@ let arrayOfObject = [
         content: "Bitmap font editor for Playdate fonts—draw your own characters, import desktop fonts, kern and preview them."
     }
 ]
-
+// Funkcia na vytvorenie novej karty
 function createNewCard(title, content){
     let newCard = document.createElement('li');
 
@@ -25,9 +26,9 @@ function createNewCard(title, content){
 
     cardsContainer.appendChild(newCard);
 };
-
+// Po kliknutí na buttton sa spusti funkcia na pridanie karty
 document.getElementById('createButton').addEventListener('click', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Aby sa stránka po kliknutí neresetovala
 
     let heading = document.getElementById('heading').value;
     let message = document.getElementById('message').value;
@@ -42,10 +43,12 @@ document.getElementById('createButton').addEventListener('click', function(event
 // ----HLAVNY KOD----
 // ------------------
 
+//Prechádzame polom objektov v JS
 arrayOfObject.forEach(object => {
     createNewCard(object.title, object.content);
 })
 
+//Prechádzame polom objektov v JSON
 fetch('../data/data.json')
     .then(response => 
         response.json())
@@ -54,5 +57,5 @@ fetch('../data/data.json')
                 createNewCard(object.title, object.content);
             })
             
-        })
+        });
 
