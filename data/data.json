@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Image Editor",
+        "content": "A tool for creating and editing pixel art graphics tailored for Playdate games. Allows you to import and export images, apply filters, and manage layers efficiently."
+    },
+    {
+        "title": "Sound Studio",
+        "content": "An audio editing environment designed to create custom sound effects and music tracks for Playdate games. Supports multiple audio formats and provides advanced mixing tools."
+    },
+    {
+        "title": "Level Designer",
+        "content": "A drag-and-drop tool for designing game levels with pre-built assets and custom logic blocks. Includes testing and preview features to see how levels interact in real time."
+    }
+]
